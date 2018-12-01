@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tombol 1"
+        android:onClick="pencetin"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tombol 2"
+        android:onClick="pencetin"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/tbl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tombol 3"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/tbl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tombol oke"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/tbl5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tombol oke aja"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

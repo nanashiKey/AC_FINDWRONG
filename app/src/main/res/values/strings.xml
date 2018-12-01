@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AndroidComplete</string>
+    <string-array name="sample_list">
+        <item>data 1</item>
+        <item>data 2</item>
+        <item>data 3</item>
+        <item>data 4</item>
+        <item>data 5</item>
+        <item>data 6</item>
+        <item>data 7</item>
+        <item>data 8</item>
+        <item>data 9</item>
+        <item>data 11</item>
+        <item>data 12</item>
+        <item>data 13</item>
+        <item>data 14</item>
+        <item>data 15</item>
+    </string-array>
+</resources>

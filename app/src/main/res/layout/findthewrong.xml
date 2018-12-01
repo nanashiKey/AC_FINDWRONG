@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        android:contentDescription="Image 1"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="LOGIN"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Nama : "
+            android:textSize="18sp"
+            />
+        <EditText
+            android:id="@+id/ednama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:hint="masukan nama"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Email : "
+            android:textSize="18sp"
+            />
+        <EditText
+            android:id="@+id/edemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:inputType="textEmailAddress"
+            android:hint="masukan email"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Password : "
+            android:textSize="18sp"
+            />
+        <EditText
+            android:id="@+id/edpasss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            android:hint="masukan password"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnKlik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="MASUK"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        />
+</LinearLayout>
