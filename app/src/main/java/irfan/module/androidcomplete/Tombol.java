@@ -21,6 +21,7 @@ public class Tombol extends AppCompatActivity implements View.OnClickListener {
             }
         };
 
+        //inisialisasi variable button
         Button tbl3 = findViewById(R.id.tbl3);
         tbl3.setOnClickListener(kelik);
 

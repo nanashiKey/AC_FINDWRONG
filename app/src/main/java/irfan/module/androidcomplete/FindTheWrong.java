@@ -29,10 +29,12 @@ public class FindTheWrong extends AppCompatActivity  implements View.OnClickList
          */
         nama = findViewById(R.id.ednama);
         email = findViewById(R.id.edemail);
-        pass = findViewById(R.id.edpasss);
-        klik = findViewById(R.id.btnKlik);
 
-        klik.setOnClickListener(this);
+
+        /**
+         * inisialisasi button
+         */
+        klik = findViewById(R.id.btnKlik);
     }
 
     /**
@@ -40,14 +42,13 @@ public class FindTheWrong extends AppCompatActivity  implements View.OnClickList
      */
     public void cekdata(String Nama, String Email, String Pass){
         //lakukan pengecekan.
-        //jika salah akan memunculkan toast/
-        //jika berhasil akan diarahkan ke halaman lain.
         if(Nama.equals("") || Email.equals("") || Pass.equals("") ||
                 !Nama.equals("test") || !Email.equals("email@test.com") || !Pass.equals("test12345")
                 ){
             //munculkan toast saat data yg ditampilkan salah
             Toast.makeText(getApplicationContext(), "nama, email atau password salah", Toast.LENGTH_SHORT).show();
         }else{
+            //diarahkan ke activity lain
             Intent oke = new Intent(FindTheWrong.this, ListViewSample.class);
             startActivity(oke);
         }
@@ -61,7 +62,6 @@ public class FindTheWrong extends AppCompatActivity  implements View.OnClickList
         switch (view.getId()){
             case R.id.btnKlik:
                 String inputNama = nama.getText().toString();
-                String inputEmail = email.getText().toString();
                 String inputPass = pass.getText().toString();
                 cekdata(inputNama, inputEmail, inputPass);
             break;
