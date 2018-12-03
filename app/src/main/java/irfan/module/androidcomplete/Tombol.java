@@ -3,6 +3,7 @@ package irfan.module.androidcomplete;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -45,5 +46,11 @@ public class Tombol extends AppCompatActivity implements View.OnClickListener {
             Toast.makeText(this, "terpencet tbl 5", Toast.LENGTH_SHORT).show();
             break;
     }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.latihan_menu, menu);
+        return true;
     }
 }

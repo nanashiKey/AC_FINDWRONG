@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pilihan1"
+        android:title="pilihan 1" />
+    <item
+        android:id="@+id/pilihan2"
+        android:title="pilihan 2" >
+        <menu>
+            <item android:id="@+id/subpil2_1"
+                android:title="submenu pil 2"/>
+            <item android:id="@+id/subpil2_2"
+                android:title="submenu pil 2"/>
+        </menu>
+        </item>
+    <item
+        android:id="@+id/pilihan3"
+        android:title="pilihan 3" />
+</menu>

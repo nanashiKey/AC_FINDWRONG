@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -34,6 +36,8 @@ public class ListViewSample extends AppCompatActivity {
         ArrayAdapter<String> aa = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
         lv.setAdapter(aa);
 
+        registerForContextMenu(lv);
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -41,10 +45,18 @@ public class ListViewSample extends AppCompatActivity {
                 if(i == 5){
                     Intent a = new Intent(ListViewSample.this, Tombol.class);
                     startActivity(a);
+                }else if(i == 0){
+                    Intent a = new Intent(ListViewSample.this, OnlyPopMenu.class);
+                    startActivity(a);
                 }
             }
         });
-
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.latihan_menu2, menu);
+    }
 }

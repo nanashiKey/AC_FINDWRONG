@@ -18,6 +18,8 @@
     </activity>
 
     <!--MASUKKAN SEMUA ACTIVITY YANG TELAH DIBUAT-->
+    <activity android:name=".ListViewSample"/>
     <activity android:name=".Tombol"/>
+    <activity android:name=".OnlyPopMenu"/>
     </application>
 </manifest>
