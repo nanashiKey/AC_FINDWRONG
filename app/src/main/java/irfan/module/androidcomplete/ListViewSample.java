@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,6 +17,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import irfan.module.androidcomplete.AllData.PrefsManager;
 
 public class ListViewSample extends AppCompatActivity {
     @Override
@@ -58,5 +62,23 @@ public class ListViewSample extends AppCompatActivity {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.latihan_menu2, menu);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.setting_login, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:{
+                PrefsManager.sharedInstance(getApplicationContext()).setStatus(false);
+                startActivity(new Intent(ListViewSample.this, FindTheWrong.class));
+                finish();
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

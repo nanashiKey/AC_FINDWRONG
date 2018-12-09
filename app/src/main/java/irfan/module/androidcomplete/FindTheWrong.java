@@ -2,6 +2,7 @@ package irfan.module.androidcomplete;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.ProxyFileDescriptorCallback;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import irfan.module.androidcomplete.AllData.PrefsManager;
 
 public class FindTheWrong extends AppCompatActivity  implements View.OnClickListener {
 
@@ -45,6 +48,15 @@ public class FindTheWrong extends AppCompatActivity  implements View.OnClickList
 
         //ini dihilangkan
         klik.setOnClickListener(this);
+
+        boolean isLogin = PrefsManager.sharedInstance(getApplicationContext()).getStatus();
+        if (isLogin){
+            Intent oke = new Intent(FindTheWrong.this, ListViewSample.class);
+            startActivity(oke);
+            finish();
+        }else{
+            Toast.makeText(getApplicationContext(), "Silahkan Login terlebih dahulu", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
@@ -59,8 +71,10 @@ public class FindTheWrong extends AppCompatActivity  implements View.OnClickList
             Toast.makeText(getApplicationContext(), "nama, email atau password salah", Toast.LENGTH_SHORT).show();
         }else{
             //diarahkan ke activity lain
+            PrefsManager.sharedInstance(getApplicationContext()).setStatus(true);
             Intent oke = new Intent(FindTheWrong.this, ListViewSample.class);
             startActivity(oke);
+            finish();
         }
     }
 
